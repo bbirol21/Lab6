@@ -17,7 +17,7 @@ public class EnergyOffer extends EnergyOperation implements Comparable {
 	
 	public String toString() {
 		return "Owner IP Adress: " + super.getOwner().getIp() + "\n" + "Energy Amount: " + super.getRequestedOrOfferedEnergy() + 
-				"\n" + "Price " + (pricePerKW*super.getRequestedOrOfferedEnergy()) + "\n" + "\n";
+				"\n" + "Price " + (pricePerKW*super.getRequestedOrOfferedEnergy()) + "\n" +  "\n";
 	}
 
 

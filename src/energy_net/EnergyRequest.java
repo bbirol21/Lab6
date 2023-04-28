@@ -28,7 +28,7 @@ public class EnergyRequest extends EnergyOperation {
 	
 	public String toString() {
 		return "Owner IP Adress: " + super.getOwner().getIp() + "\n" + "Energy Amount: " + super.getRequestedOrOfferedEnergy() + 
-				"\n" + "Preferred IP: " + ipAdress + "\n" + "IDSİ: " + super.getId() + "\n" + "\n";
+				"\n" + "Preferred IP: " + ipAdress + "\n" + "IDSİ: " + super.getId() +"\n" + "Energy Preference: " + pref + "\n" + "\n";
 	}
 
 	public EnergyPreference getPref() {
