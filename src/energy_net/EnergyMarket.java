@@ -3,7 +3,7 @@ package energy_net;
 import java.util.Map;
 import java.util.Set;
 import java.util.ArrayList;
-
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -109,7 +109,7 @@ public class EnergyMarket {
     
     public void trade() {
         for (int i = 0; i< energyRequests.size(); i++) {
-        	EnergyRequest request=energyRequests.get(i);
+        	EnergyRequest request = energyRequests.get(i);
             while (request.getRequestedOrOfferedEnergy() > 0) {
                 EnergyOffer offer = null;
                 
@@ -140,13 +140,14 @@ public class EnergyMarket {
                     
                     if (request.getRequestedOrOfferedEnergy() == 0) {
                         energyRequests.remove(request);
+                        
                     }
                 }
                 
                 else {
                     break;
                 }
-            }
+            } 
         }
     }
 
@@ -209,6 +210,10 @@ public class EnergyMarket {
 //        }
 //    }
 //
+    
+    public void sorting(EnergyPreference pref) {
+    	Collections.sort(energyOffers);
+    }
 
 	@Override
 	public String toString() {
